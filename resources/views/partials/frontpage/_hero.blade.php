@@ -7,7 +7,7 @@
                 <img src="{{ asset('img/hero/herotext.svg') }}" alt="{{ config('app.name') }}" class="responsive__image hero__text ">
             </div>
             <div class="md-col-6">
-                @include('partials.svg._code-review')
+                <img src="{{ asset('img/hero/code-review.svg') }}" alt="{{ config('app.name') }}" class="comin responsive__image hero__text ">
             </div>
         </div>
     </div>
