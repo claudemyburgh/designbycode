@@ -1,0 +1,75 @@
+.contact-form
+    padding: 30px
+    min-height: 100px
+    +radius
+    +nue
+
+    & .block
+        +nue($spread: 12px)
+        width: 100px
+        height: 100px
+        display: block
+        margin: 15px auto
+        font-weight: 700
+        +radius(50%)
+        text-align: center
+        line-height: 100px
+        cursor: pointer
+        @extend .selectable__false
+
+    &__header
+        width: 100%
+        height: 120px
+        display: flex
+        justify-content: center
+        flex-direction: flex-start
+
+    &__item
+        box-shadow: inset rgba(#000, 0.1) 4px 4px 8px, inset rgba(#fff, 1) -4px -4px 8px !important
+
+        &::placeholder
+            color: mix($primary-color, #fff, 20%)
+
+    & .form__item,
+    & input[type="tel"].form__item,
+    & textarea.form__item
+        color: $global-font-color
+
+    & input[type="checkbox"]
+        display: none
+
+        &:checked + .block
+            background: $primary-color
+            background: linear-gradient(142deg, $primary-color, darken($primary-color, 5%))
+            box-shadow: inset 5px 5px 5px darken($primary-color, 5%), inset -5px -5px 5px lighten($primary-color, 5%)
+
+
+
+    & table.table
+        +nue
+        +radius
+
+
+    &__steps
+        ul
+            width: 100%
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+            list-style: none
+            margin: 0px
+            padding: 30px
+
+        li
+            display: flex
+            justify-content: center
+            align-items: center
+            height: 30px
+            width: 30px
+            font-weight: bold
+            +radius(15px)
+            +nue
+        &--active
+            transform: scale(1.2)
+            background: $primary-color !important

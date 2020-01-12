@@ -1,0 +1,18 @@
+.cartoon
+    position: relative
+    top: 30px
+    display: block
+    float: left
+    width: 90px
+    max-width: 80%
+    shape-outside: url('/img/claude-cartoon.png')
+    shape-margin: 25px
+    margin-right: 15px
+    +media-up(md)
+        width: 200px
+        transform: skewY(5deg)
+
+    &__wrapper
+        +media-down(md)
+            flex-direction: column-reverse
+

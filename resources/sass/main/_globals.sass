@@ -1,0 +1,81 @@
+
+
+=text-shadow($color: #000)
+    text-shadow: rgba($color, 0.75) 2px 2px 3px
+
+=box-shadow($color: #000)
+    box-shadow: rgba($color, 0.25) 10px 10px 30px
+
+
+=nue($color: #fdfdfd, $background: $color, $spread: 6px)
+    // background: $color
+    background: linear-gradient(142deg, $color, darken($color, 5%))
+    border-top: lighten($background, 5%) 2px solid !important
+    border-left: lighten($background, 5%) 2px solid !important
+    border-right: darken($background, 5%) 2px solid !important
+    border-bottom: darken($background, 5%) 2px solid !important
+    box-shadow: darken($background, 9%) $spread $spread 8px, lighten($background, 12%) -#{$spread} -#{$spread} 8px !important
+    // box-shadow: rgba(#000, 0.05) 6px 6px 15px, rgba(#fff, 1) -6px -6px 15px
+
+=nuedrop($color: #fdfdfd, $spread: 6px)
+    filter: drop-shadow(darken($color, 9%) $spread $spread 8px) drop-shadow(lighten($color, 12%) -#{$spread} -#{$spread} 8px)
+
+#app
+    position: relative
+
+.nue
+    +nue
+    &drop
+        +nuedrop
+
+
+.skew
+    transform: skewY(-7deg)
+
+
+.padding
+    padding-top: 40px
+    padding-bottom: 40px
+    +media-up(md)
+        padding-top: 80px
+        padding-bottom: 80px
+    +media-up(lg)
+        padding-top: 120px
+        padding-bottom: 120px
+
+.margin
+    margin-top: 40px
+    margin-bottom: 40px
+    +media-up(md)
+        margin-top: 80px
+        margin-bottom: 80px
+    +media-up(lg)
+        margin-top: 120px
+        margin-bottom: 120px
+
+.margin-bottom
+    margin-bottom: 40px
+    +media-up(md)
+        margin-bottom: 80px
+    +media-up(lg)
+        margin-bottom: 120px
+
+
+.section
+    @extend .margin
+    @extend .padding
+
+
+.lead
+    line-height: 2
+    letter-spacing: 1.1px
+
+
+.skew
+    +media-up(md)
+        transform: skewY(-5deg)
+
+
+.shift
+    &--down
+        transform: translateY(10%)

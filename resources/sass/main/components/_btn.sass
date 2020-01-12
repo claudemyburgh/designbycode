@@ -1,0 +1,18 @@
+
+
+.btn
+    &:not(:last-child)
+        margin-right: 10px !important
+
+    &--nue
+        +nue
+        font-weight: bold
+
+        &:hover
+            box-shadow: inset rgba(#000, 0.1) 4px 4px 8px, inset rgba(#000, 0.05) -4px -4px 8px !important
+
+        &-dark
+            +nue($color: $primary-color, $background: $dark-color)
+            color: #fdfdfd !important
+
+
