@@ -1,7 +1,7 @@
-<div class="deviders shift--down">
+{{-- <div class="deviders shift--down">
     <img src="{{ asset('img/deviders/hero.svg') }}" alt="DesignByCode Devider image" class="deviders__hero">
 </div>
-
+ --}}
 
 <footer class="footer section-margin--md-top">
     <div class="deviders__footer">
