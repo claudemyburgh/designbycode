@@ -1,4 +1,4 @@
-const limeGreen = {
+const starship = {
   DEFAULT: "#CBEF59",
   50: "#FFFFFF",
   100: "#FAFDEE",
@@ -43,6 +43,36 @@ const gray = {
   950: "#090909",
 }
 
+const studio = {
+  DEFAULT: "#7A47A9",
+  50: "#D5C2E5",
+  100: "#CAB4DF",
+  200: "#B697D3",
+  300: "#A27AC7",
+  400: "#8E5EBB",
+  500: "#7A47A9",
+  600: "#5D3681",
+  700: "#41265A",
+  800: "#241532",
+  900: "#08050B",
+  950: "#000000",
+}
+
+const mandy = {
+  DEFAULT: "#EC5872",
+  50: "#FFFDFD",
+  100: "#FDEBEE",
+  200: "#F9C6CF",
+  300: "#F4A1B0",
+  400: "#F07D91",
+  500: "#EC5872",
+  600: "#E62647",
+  700: "#BE1633",
+  800: "#8C1026",
+  900: "#590A18",
+  950: "#400711",
+}
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: "class",
@@ -54,8 +84,9 @@ module.exports = {
         sans: ["var(--font-questrial)"],
       },
       colors: {
-        primary: limeGreen,
+        primary: starship,
         secondary: purple,
+        tri: mandy,
         alt: "#83eff2",
         alt2: "#9df6da",
         alt3: "#d5f6fd",
