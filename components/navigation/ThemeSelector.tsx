@@ -75,13 +75,13 @@ export function ThemeSelector(props: any) {
   return (
     <Listbox as="div" value={theme} onChange={setTheme} {...props}>
       <Listbox.Label className="sr-only">Theme</Listbox.Label>
-      <Listbox.Button className="shadow-block-small shake bg-white h-10 w-10 hover:scale-105 text-gray-600 flex justify-center items-center" aria-label={theme}>
-        <LightIcon className="hidden h-4 w-4 fill-gray [[data-theme=light]_&]:block" />
-        <DarkIcon className="hidden h-4 w-4 fill-gray [[data-theme=dark]_&]:block" />
-        <SystemIcon className="hidden h-4 w-4 fill-gray [:not(.dark)[data-theme=system]_&]:block" />
-        <SystemIcon className="hidden h-4 w-4 fill-gray [.dark[data-theme=system]_&]:block" />
+      <Listbox.Button className="h-10 w-10 hover:scale-105 text-gray-600 border border-primary rounded-l-lg rounded-r-3xl flex justify-center items-center" aria-label={theme}>
+        <LightIcon className="hidden h-4 w-4 fill-primary [[data-theme=light]_&]:block" />
+        <DarkIcon className="hidden h-4 w-4 fill-primary [[data-theme=dark]_&]:block" />
+        <SystemIcon className="hidden h-4 w-4 fill-primary [:not(.dark)[data-theme=system]_&]:block" />
+        <SystemIcon className="hidden h-4 w-4 fill-primary [.dark[data-theme=system]_&]:block" />
       </Listbox.Button>
-      <Listbox.Options className="absolute top-full left-1/2 mt-3 w-36 -translate-x-1/2 space-y-1 p-1.5 text-sm font-medium  ring-1 ring-gray bg-white  border-[4px] border-gray rounded-2xl shadow-large">
+      <Listbox.Options className="absolute top-full left-1/2 mt-2 w-36 -translate-x-1/2 space-y-1 p-1.5 text-sm font-medium  ring-0 bg-gray-100 dark:bg-gray-900 border-2 dark:border-primary border-secondary/50 rounded-3xl shadow-xl shadow-secondary dark:shadow-primary/20">
         {themes.map((themeChild) => (
           <Listbox.Option
             key={themeChild.value}
@@ -96,9 +96,9 @@ export function ThemeSelector(props: any) {
             }
           >
             {({ selected }) => (
-              <div className={`flex group flex-1 shake font-semibold rounded items-center p-1.5 hover:bg-gray/10`}>
-                <themeChild.icon className={twMerge("h-4 w-4", selected ? "fill-primary" : "fill-gray")} />
-                <div className="ml-3 text-gray group-hover:text-primary-700">{themeChild.name}</div>
+              <div className={`flex group flex-1 font-semibold rounded-2xl items-center p-1.5 dark:hover:bg-primary hover:bg-secondary`}>
+                <themeChild.icon className={twMerge("h-4 w-4", selected ? "fill-primary-700 group-hover:fill-primary  dark:fill-primary" : "fill-gray-300 dark:fill-gray-700 ")} />
+                <div className="ml-3 text-gray-700 dark:text-gray-300 group-hover:text-gray-50  group-hover:dark:text-primary-900">{themeChild.name}</div>
               </div>
             )}
           </Listbox.Option>

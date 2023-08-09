@@ -1,18 +1,10 @@
 import React from "react"
-import SmallBanner from "@/components/banners/SmallBanner"
 
 const Footer = () => {
   return (
-    <footer className={`wrapper relative bg-sky-300 text-gray py-12 my-12 shadow-block`}>
-      <SmallBanner className={`absolute -top-6 -left-4 -rotate-6 flex items-center bg-green-500`}>
-        Footer Section{" "}
-        <span className={`ml-2`}>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5" />
-          </svg>
-        </span>
-      </SmallBanner>
-
+    <footer
+      className={`wrapper border dark:border-primary border-secondary-600 relative shadow-2xl shadow-secondary dark:shadow-primary/10  dark:bg-gray-900 bg-secondary/10 backdrop-blur rounded-3xl text-gray py-12 my-12 shadow-block`}
+    >
       <div className="relative text-gray z-10">
         <div className="grid grid-cols-12">
           <div className={`col-span-12 md:col-span-4`}>

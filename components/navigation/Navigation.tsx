@@ -5,6 +5,7 @@ import React, { Fragment, useState } from "react"
 import Link from "next/link"
 import { twJoin } from "tailwind-merge"
 import { Dialog, Menu, Transition } from "@headlessui/react"
+import Image from "next/image"
 
 const Navigation = () => {
   let [isOpen, setIsOpen] = useState<boolean>(false)
@@ -12,11 +13,13 @@ const Navigation = () => {
   function handleDeactivate() {}
 
   return (
-    <div className={`wrapper relative z-[200] space-x-8 my-8 flex items-center justify-between`}>
-      <Link href={`/`} className={twJoin(`shake font-header bg-primary shadow-block hover:shadow-large2 text-gray p-3 text-4xl font-black`)}>
-        DesignByCode
+    <div
+      className={`wrapper relative z-[200] shadow-2xl shadow-secondary dark:shadow-primary/20 space-x-8 my-6 min-h-[70px] flex items-center border-2 dark:border-primary border-secondary-600 justify-between dark:bg-gray-900 bg-secondary rounded-full`}
+    >
+      <Link href={`/`} className={`flex-shrink-0`}>
+        <Image src={`/designbycode.svg`} className={`h-[40px] md:h-14`} width={218} height={90} alt={`designbycode`} />
       </Link>
-      <div className={`space-x-8  text-lg font-semibold hidden md:flex dark:[text-shadow:_3px_3px_1px_black]`}>
+      <div className={`space-x-8 text-white  text-lg font-semibold hidden md:flex dark:[text-shadow:_3px_3px_1px_black]`}>
         <Link className={`shake`} href={`/`}>
           Home
         </Link>
@@ -25,8 +28,8 @@ const Navigation = () => {
         </Link>
         <Menu as={`div`} className={`relative`}>
           <Menu.Button className={`flex items-center shake dark:[text-shadow:_3px_3px_1px_black]`}>
-            Free Stuff
-            <span className={`shadow-block-xsmall bg-primary block ml-2 text-gray`}>
+            Packages
+            <span className={`block ml-2 text-white`}>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-5 h-5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
               </svg>
@@ -40,17 +43,10 @@ const Navigation = () => {
             <Menu.Item>
               {({ active }) => (
                 <Link
-                  className={twJoin("flex group flex-1 shake text-gray font-semibold rounded items-center p-2 hover:bg-tri-300/20", active && "text-primary-700 bg-alt2/20 shaker")}
-                  href="/packages"
-                >
-                  Packages
-                </Link>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <Link
-                  className={twJoin("flex group flex-1 shake text-gray font-semibold rounded items-center p-2 hover:bg-tri-300/20", active && "text-primary-700 bg-alt2/20 shaker")}
+                  className={twJoin(
+                    "flex group flex-1 shake text-gray hover:shadow-block-xsmall rounded-md font-semibold hover:stripes stripes-size-xs stripes-opacity-10 rounded items-center p-2 hover:bg-primary",
+                    active && "text-gray bg-primary shaker"
+                  )}
                   href="/packages"
                 >
                   Packages
@@ -61,8 +57,21 @@ const Navigation = () => {
               {({ active }) => (
                 <Link
                   className={twJoin(
-                    "flex group flex-1 shake text-gray font-semibold rounded items-center p-1.5 hover:bg-tri-300/20",
-                    active && "text-primary-700 bg-alt2/20 shaker"
+                    "flex group flex-1 shake text-gray hover:shadow-block-xsmall rounded-md font-semibold hover:stripes stripes-size-xs stripes-opacity-10 rounded items-center p-2 hover:bg-primary",
+                    active && "text-gray bg-primary shaker"
+                  )}
+                  href="/packages"
+                >
+                  Packages
+                </Link>
+              )}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => (
+                <Link
+                  className={twJoin(
+                    "flex group flex-1 shake text-gray hover:shadow-block-xsmall rounded-md font-semibold hover:stripes stripes-size-xs stripes-opacity-10 rounded items-center p-2 hover:bg-primary",
+                    active && "text-gray bg-primary shaker"
                   )}
                   href="/packages"
                 >
@@ -78,13 +87,9 @@ const Navigation = () => {
         <Link className={`shake`} href={`#`}>
           Graphics
         </Link>
-        <Link className={`shake`} href={`#`}>
-          Contact Us
-        </Link>
       </div>
 
       <div className={`flex space-x-4`}>
-        <ThemeSelector className={`relative`} />
         <button onClick={() => setIsOpen(true)} type={`button`} className={`shadow-block-small shake bg-white hover:scale-105 h-10 w-[200px] text-gray flex items-center`}>
           <svg className={`h-5 w-5 mx-2`} fill={`currentColor`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.31 20.31">
             <path d="m8.77,12.66c-1.4.16-2.78-.32-3.77-1.32h0c-.38-.38-.69-.82-.91-1.3-.18-.38-.63-.54-1.01-.36-.38.18-.54.63-.36,1.01.3.64.71,1.22,1.21,1.72,1.16,1.16,2.71,1.79,4.32,1.79.23,0,.46-.01.69-.04.17-.02.33-.1.45-.22.17-.16.24-.39.22-.62-.02-.2-.12-.38-.28-.51-.16-.13-.35-.19-.56-.16Z" />
@@ -92,6 +97,7 @@ const Navigation = () => {
           </svg>
           <span className={`font-semibold text-lg`}>Search</span>
         </button>
+        <ThemeSelector className={`relative`} />
 
         <Transition appear show={isOpen} as={Fragment}>
           <Dialog as="div" className="relative z-[300]" onClose={() => setIsOpen(false)}>
