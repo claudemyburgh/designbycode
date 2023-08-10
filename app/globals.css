@@ -12,6 +12,11 @@
     --secondary: theme('colors.primary.400');
   }
 
+  [data-theme-value="dark"] :root {
+    --primary: theme('colors.gray.400');
+    --secondary: theme('colors.secondary.500');
+  }
+
 
   *::selection {
     background: var(--secondary);
@@ -42,6 +47,45 @@
 
   *::selection {
     @apply bg-primary-100 text-primary-600;
+  }
+
+
+  .card {
+    isolation: isolate;
+    --mouse-x: 0;
+    --mouse-y: 0;
+    --mouse-scale: 0;
+    --light-color: theme('colors.secondary[500]')
+  }
+
+  .dark .card {
+    --light-color: theme('colors.primary[500]')
+  }
+
+  .card::before {
+    content: "";
+    /*background: radial-gradient(300px circle at var(--mouse-x) var(--mouse-y), green, transparent);*/
+    background: radial-gradient(var(--mouse-scale) circle at var(--mouse-x) var(--mouse-y), var(--light-color), transparent);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    opacity: 0;
+    transition-duration: 750ms;
+    transition-timing-function: ease-out;
+    transition-property: all;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    transform-origin: center;
+    border-radius: inherit;
+
+  }
+
+  .card:hover::before {
+
+    opacity: 0.15;
+    --mouse-scale: 300px;
   }
 
 

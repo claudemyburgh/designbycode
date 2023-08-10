@@ -75,13 +75,16 @@ export function ThemeSelector(props: any) {
   return (
     <Listbox as="div" value={theme} onChange={setTheme} {...props}>
       <Listbox.Label className="sr-only">Theme</Listbox.Label>
-      <Listbox.Button className="h-10 w-10 hover:scale-105 text-gray-600 border border-primary rounded-l-lg rounded-r-3xl flex justify-center items-center" aria-label={theme}>
+      <Listbox.Button
+        className="h-10 w-10 hover:scale-105 text-gray-600 bg-secondary dark:border-primary border-2 border-secondary-600 dark:bg-transparent rounded-l-lg rounded-r-3xl flex justify-center items-center"
+        aria-label={theme}
+      >
         <LightIcon className="hidden h-4 w-4 fill-primary [[data-theme=light]_&]:block" />
         <DarkIcon className="hidden h-4 w-4 fill-primary [[data-theme=dark]_&]:block" />
         <SystemIcon className="hidden h-4 w-4 fill-primary [:not(.dark)[data-theme=system]_&]:block" />
         <SystemIcon className="hidden h-4 w-4 fill-primary [.dark[data-theme=system]_&]:block" />
       </Listbox.Button>
-      <Listbox.Options className="absolute top-full left-1/2 mt-2 w-36 -translate-x-1/2 space-y-1 p-1.5 text-sm font-medium  ring-0 bg-gray-100 dark:bg-gray-900 border-2 dark:border-primary border-secondary/50 rounded-3xl shadow-xl shadow-secondary dark:shadow-primary/20">
+      <Listbox.Options className="absolute top-full left-0  mt-2 w-36 -translate-x-1/2 space-y-1 p-1.5 text-sm font-medium  ring-0 bg-gray-100 dark:bg-gray-900 border-2 dark:border-primary border-secondary/50 rounded-3xl shadow-xl shadow-secondary dark:shadow-primary/20">
         {themes.map((themeChild) => (
           <Listbox.Option
             key={themeChild.value}

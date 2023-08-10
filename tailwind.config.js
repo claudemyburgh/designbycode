@@ -18,6 +18,9 @@ module.exports = {
       backgroundImage: {
         pattern: "url(../public/pattern.svg)",
       },
+      borderRadius: {
+        inherit: "inherit",
+      },
     },
   },
   plugins: [

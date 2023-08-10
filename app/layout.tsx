@@ -19,9 +19,28 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
+  // if (typeof window === "undefined") {
+  //   const handleMouseMovement = (e: MouseEvent) => {
+  //     const { currentTarget: target } = e
+  //     const rect = (target as HTMLElement).getBoundingClientRect()
+  //     let y = e.clientY - rect.top
+  //     let x = e.clientX - rect.left
+  //     ;(target as HTMLElement).style.setProperty("--mouse-x", `${x}px`)
+  //     ;(target as HTMLElement).style.setProperty("--mouse-y", `${y}px`)
+  //   }
+  //
+  //   setTimeout(() => {
+  //     // @ts-ignore
+  //     for (const card of document?.querySelectorAll(".card")) {
+  //       console.log(card)
+  //       ;(card as HTMLElement).onmousemove = handleMouseMovement
+  //     }
+  //   }, 1000)
+  // }
+
   return (
     <html lang="en" data-theme={`system`} className={twMerge(`${heading.variable} ${sans.variable} scroll-smooth`)}>
-      <body className={`font-sans bg-gray-100 dark:bg-gray-900 relative`}>
+      <body className={`font-sans bg-gray-100 dark:bg-gray-900 relative max-w-full overflow-x-hidden`}>
         <a
           className={`sr-only focus:not-sr-only focus:inline-block focus:px-3 focus:py-2 focus:font-bold rounded-md focus:absolute text-gray-100 bg-gray border-primary border-4 focus:top-1 active:bg-primary-500 active:text-gray focus:left-5 z-[500]`}
           href="#main"
@@ -29,7 +48,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           Skip to main
         </a>
         <LinePattern
-          className={`fixed opacity-75 -inset-1 mask-image-b mask-image-from-0 mask-image-to-50 mask-image-start-50 mask-image-end-60 stroke-2 dark:stroke-primary-500/50 drop-shadow-xl stroke-secondary/30`}
+          className={`fixed opacity-75 scale-[102%] inset-0 mask-image-b mask-image-from-0 mask-image-to-50 mask-image-start-50 mask-image-end-60 stroke-2 dark:stroke-primary-500/50 drop-shadow-xl stroke-secondary/30`}
         />
         <Navigation />
         <div id="main">{children}</div>

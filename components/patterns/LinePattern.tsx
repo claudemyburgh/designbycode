@@ -4,7 +4,7 @@ import { twMerge } from "tailwind-merge"
 const LinePattern: FC<{ className?: string }> = ({ className }) => {
   return (
     <div className={`relative`}>
-      <svg xmlns="http://www.w3.org/2000/svg" className={twMerge("w-full -z-10 text-secondary-200/50 dark:text-gray-950/50", className)} viewBox="0 0 1850.26 1628">
+      <svg xmlns="http://www.w3.org/2000/svg" className={twMerge("w-full -z-10 text-secondary-200/30 dark:text-gray-950/30", className)} viewBox="0 0 1850.26 1628">
         <defs>
           <pattern id={`pattern`} width={`100%`} height={`1628px`} patternUnits={`userSpaceOnUse`}>
             <g>
