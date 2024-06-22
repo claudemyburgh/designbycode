@@ -10,7 +10,7 @@ export default {
         './storage/framework/views/*.{php,text,md}',
         './resources/views/**/*.blade.php',
     ],
-    darkMode: "class",
+    darkMode: "media",
     safelist: ['.copy-button', '.language-header', '.fadeIn'],
     theme: {
         extend: {

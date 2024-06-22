@@ -38,31 +38,31 @@ devDependencies:
     specifier: ^0.5.7
     version: 0.5.7(tailwindcss@3.4.4)
   '@tailwindcss/typography':
-    specifier: ^0.5.13
+    specifier: ^0.5.10
     version: 0.5.13(tailwindcss@3.4.4)
   autoprefixer:
-    specifier: ^10.4.19
+    specifier: ^10.4.16
     version: 10.4.19(postcss@8.4.38)
   axios:
-    specifier: ^1.6.4
+    specifier: ^1.7.2
     version: 1.7.2
   laravel-vite-plugin:
-    specifier: ^1.0
+    specifier: ^1.0.4
     version: 1.0.4(vite@5.3.1)
   postcss:
-    specifier: ^8.4.38
+    specifier: ^8.4.32
     version: 8.4.38
   prettier:
     specifier: ^3.3.2
     version: 3.3.2
   tailwindcss:
-    specifier: ^3.4.4
+    specifier: ^3.4.0
     version: 3.4.4
   tailwindcss-attributes:
     specifier: ^1.2.3
     version: 1.2.3
   vite:
-    specifier: ^5.0
+    specifier: ^5.3.1
     version: 5.3.1
 
 packages:
