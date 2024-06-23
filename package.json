@@ -15,17 +15,19 @@
         "@designbycode/tailwindcss-text-stroke": "^1.2.1",
         "@tailwindcss/container-queries": "^0.1.1",
         "@tailwindcss/forms": "^0.5.7",
-        "@tailwindcss/typography": "^0.5.10",
-        "autoprefixer": "^10.4.16",
+        "@tailwindcss/typography": "^0.5.13",
+        "autoprefixer": "^10.4.19",
         "axios": "^1.7.2",
         "laravel-vite-plugin": "^1.0.4",
-        "postcss": "^8.4.32",
+        "postcss": "^8.4.38",
+        "postcss-nesting": "^12.1.5",
         "prettier": "^3.3.2",
-        "tailwindcss": "^3.4.0",
+        "tailwindcss": "^3.4.4",
         "tailwindcss-attributes": "^1.2.3",
         "vite": "^5.3.1"
     },
     "dependencies": {
+        "@designbycode/theme-manager": "^1.0.3",
         "vanilla-headless": "^0.10.1"
     }
 }

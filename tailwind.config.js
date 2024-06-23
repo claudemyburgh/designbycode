@@ -10,7 +10,7 @@ export default {
         './storage/framework/views/*.{php,text,md}',
         './resources/views/**/*.blade.php',
     ],
-    darkMode: "media",
+    darkMode: "class",
     safelist: ['.copy-button', '.language-header', '.fadeIn'],
     theme: {
         extend: {
@@ -18,7 +18,7 @@ export default {
                 primary: colors.sky,
                 secondary: colors.fuchsia,
                 tri: colors.rose,
-                gray: colors.gray,
+                gray: colors.slate,
                 shopify: {
                     light: "#8db849",
                     dark: "#5a863e",
@@ -26,6 +26,9 @@ export default {
                 }
             },
             fontFamily: {
+                druk: ["druk_webbold", ...defaultTheme.fontFamily.sans],
+                hand: ['Gochi Hand', 'handwriting'],
+                mono: ['JetBrains Mono', ...defaultTheme.fontFamily.mono],
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
         },

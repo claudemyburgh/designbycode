@@ -11,6 +11,8 @@ test('team names can be updated', function () {
         ->set(['state' => ['name' => 'Test Team']])
         ->call('updateTeamName');
 
-    expect($user->fresh()->ownedTeams)->toHaveCount(1);
-    expect($user->currentTeam->fresh()->name)->toEqual('Test Team');
-});
+    expect($user->fresh()->ownedTeams)->toHaveCount(1)
+        ->and($user->currentTeam->fresh()->name)->toEqual('Test Team');
+})->skip(function () {
+    return config('disabled.teams');
+}, 'Teams support is not enabled.');

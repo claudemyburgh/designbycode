@@ -25,5 +25,5 @@ test('api tokens can be deleted', function () {
 
     expect($user->fresh()->tokens)->toHaveCount(0);
 })->skip(function () {
-    return ! Features::hasApiFeatures();
-}, 'API support is not enabled.');
+    return ! Features::teams();
+}, 'Teams support is not enabled.');

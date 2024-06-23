@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@designbycode/theme-manager':
+    specifier: ^1.0.3
+    version: 1.0.3
   vanilla-headless:
     specifier: ^0.10.1
     version: 0.10.1
@@ -38,10 +41,10 @@ devDependencies:
     specifier: ^0.5.7
     version: 0.5.7(tailwindcss@3.4.4)
   '@tailwindcss/typography':
-    specifier: ^0.5.10
+    specifier: ^0.5.13
     version: 0.5.13(tailwindcss@3.4.4)
   autoprefixer:
-    specifier: ^10.4.16
+    specifier: ^10.4.19
     version: 10.4.19(postcss@8.4.38)
   axios:
     specifier: ^1.7.2
@@ -50,13 +53,16 @@ devDependencies:
     specifier: ^1.0.4
     version: 1.0.4(vite@5.3.1)
   postcss:
-    specifier: ^8.4.32
+    specifier: ^8.4.38
     version: 8.4.38
+  postcss-nesting:
+    specifier: ^12.1.5
+    version: 12.1.5(postcss@8.4.38)
   prettier:
     specifier: ^3.3.2
     version: 3.3.2
   tailwindcss:
-    specifier: ^3.4.0
+    specifier: ^3.4.4
     version: 3.4.4
   tailwindcss-attributes:
     specifier: ^1.2.3
@@ -70,6 +76,24 @@ packages:
   /@alloc/quick-lru@5.2.0:
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
+    dev: true
+
+  /@csstools/selector-resolve-nested@1.1.0(postcss-selector-parser@6.1.0):
+    resolution: {integrity: sha512-uWvSaeRcHyeNenKg8tp17EVDRkpflmdyvbE0DHo6D/GdBb6PDnCYYU6gRpXhtICMGMcahQmj2zGxwFM/WC8hCg==}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss-selector-parser: ^6.0.13
+    dependencies:
+      postcss-selector-parser: 6.1.0
+    dev: true
+
+  /@csstools/selector-specificity@3.1.1(postcss-selector-parser@6.1.0):
+    resolution: {integrity: sha512-a7cxGcJ2wIlMFLlh8z2ONm+715QkPHiyJcxwQlKOz/03GPw1COpfhcmC9wm4xlZfp//jWHNNMwzjtqHXVWU9KA==}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss-selector-parser: ^6.0.13
+    dependencies:
+      postcss-selector-parser: 6.1.0
     dev: true
 
   /@designbycode/tailwindcss-conic-gradient@1.0.3(tailwindcss@3.4.4):
@@ -127,6 +151,10 @@ packages:
     dependencies:
       tailwindcss: 3.4.4
     dev: true
+
+  /@designbycode/theme-manager@1.0.3:
+    resolution: {integrity: sha512-+3GVdVPBaBwX7nXqko4gf5VhHGNF7zLZpdvESgG7ai7fm5gsJ6eLllMbrpI699YzsN50vraEWWye+NRhlc48yA==}
+    dev: false
 
   /@esbuild/aix-ppc64@0.21.5:
     resolution: {integrity: sha512-1SDgH6ZSPTlggy1yI6+Dbkiz8xzpHJEVAlF/AM1tHPLsf5STom9rwtjE4hKAF20FfXXNTFqEYXyJNWh1GiZedQ==}
@@ -1161,6 +1189,18 @@ packages:
     peerDependencies:
       postcss: ^8.2.14
     dependencies:
+      postcss: 8.4.38
+      postcss-selector-parser: 6.1.0
+    dev: true
+
+  /postcss-nesting@12.1.5(postcss@8.4.38):
+    resolution: {integrity: sha512-N1NgI1PDCiAGWPTYrwqm8wpjv0bgDmkYHH72pNsqTCv9CObxjxftdYu6AKtGN+pnJa7FQjMm3v4sp8QJbFsYdQ==}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      '@csstools/selector-resolve-nested': 1.1.0(postcss-selector-parser@6.1.0)
+      '@csstools/selector-specificity': 3.1.1(postcss-selector-parser@6.1.0)
       postcss: 8.4.38
       postcss-selector-parser: 6.1.0
     dev: true
