@@ -22,16 +22,16 @@ class Navigation extends Component
     public function render(): View|Closure|string
     {
         $links = collect([
-            (object)[
-                "name" => "Home",
-                "route" => "home",
-                "active" => "/",
-                "children" => null
+            (object) [
+                'name' => 'Home',
+                'route' => 'home',
+                'active' => '/',
+                'children' => null,
             ],
         ]);
 
         return view('components.navigation.index', [
-            'links' => $links
+            'links' => $links,
         ]);
     }
 }
