@@ -4658,8 +4658,8 @@
             "type": "library",
             "extra": {
                 "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
                 }
             },
             "autoload": {
@@ -4979,8 +4979,8 @@
             "type": "library",
             "extra": {
                 "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
                 }
             },
             "autoload": {
@@ -5053,8 +5053,8 @@
             "type": "library",
             "extra": {
                 "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
                 }
             },
             "autoload": {
@@ -9110,16 +9110,16 @@
         },
         {
             "name": "spatie/ray",
-            "version": "1.41.3",
+            "version": "1.41.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/ray.git",
-                "reference": "e2ecbc17a493dab635f3cf026858b46f0ccbb053"
+                "reference": "c5dbda0548c1881b30549ccc0b6d485f7471aaa5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/ray/zipball/e2ecbc17a493dab635f3cf026858b46f0ccbb053",
-                "reference": "e2ecbc17a493dab635f3cf026858b46f0ccbb053",
+                "url": "https://api.github.com/repos/spatie/ray/zipball/c5dbda0548c1881b30549ccc0b6d485f7471aaa5",
+                "reference": "c5dbda0548c1881b30549ccc0b6d485f7471aaa5",
                 "shasum": ""
             },
             "require": {
@@ -9179,7 +9179,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/ray/issues",
-                "source": "https://github.com/spatie/ray/tree/1.41.3"
+                "source": "https://github.com/spatie/ray/tree/1.41.4"
             },
             "funding": [
                 {
@@ -9191,7 +9191,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2024-12-02T12:33:18+00:00"
+            "time": "2024-12-09T11:32:15+00:00"
         },
         {
             "name": "symfony/stopwatch",
