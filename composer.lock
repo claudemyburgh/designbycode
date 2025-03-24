@@ -3729,16 +3729,16 @@
         },
         {
             "name": "ramsey/collection",
-            "version": "2.1.0",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ramsey/collection.git",
-                "reference": "3c5990b8a5e0b79cd1cf11c2dc1229e58e93f109"
+                "reference": "344572933ad0181accbf4ba763e85a0306a8c5e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/collection/zipball/3c5990b8a5e0b79cd1cf11c2dc1229e58e93f109",
-                "reference": "3c5990b8a5e0b79cd1cf11c2dc1229e58e93f109",
+                "url": "https://api.github.com/repos/ramsey/collection/zipball/344572933ad0181accbf4ba763e85a0306a8c5e2",
+                "reference": "344572933ad0181accbf4ba763e85a0306a8c5e2",
                 "shasum": ""
             },
             "require": {
@@ -3799,9 +3799,9 @@
             ],
             "support": {
                 "issues": "https://github.com/ramsey/collection/issues",
-                "source": "https://github.com/ramsey/collection/tree/2.1.0"
+                "source": "https://github.com/ramsey/collection/tree/2.1.1"
             },
-            "time": "2025-03-02T04:48:29+00:00"
+            "time": "2025-03-22T05:38:12+00:00"
         },
         {
             "name": "ramsey/uuid",
@@ -9325,16 +9325,16 @@
         },
         {
             "name": "spatie/ray",
-            "version": "1.41.4",
+            "version": "1.41.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/ray.git",
-                "reference": "c5dbda0548c1881b30549ccc0b6d485f7471aaa5"
+                "reference": "ae6e32a54a901544a3d70b12b865900bc240f71c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/ray/zipball/c5dbda0548c1881b30549ccc0b6d485f7471aaa5",
-                "reference": "c5dbda0548c1881b30549ccc0b6d485f7471aaa5",
+                "url": "https://api.github.com/repos/spatie/ray/zipball/ae6e32a54a901544a3d70b12b865900bc240f71c",
+                "reference": "ae6e32a54a901544a3d70b12b865900bc240f71c",
                 "shasum": ""
             },
             "require": {
@@ -9342,18 +9342,18 @@
                 "ext-json": "*",
                 "php": "^7.4 || ^8.0",
                 "ramsey/uuid": "^3.0 || ^4.1",
-                "spatie/backtrace": "^1.1",
+                "spatie/backtrace": "^1.7.1",
                 "spatie/macroable": "^1.0 || ^2.0",
                 "symfony/stopwatch": "^4.2 || ^5.1 || ^6.0 || ^7.0",
                 "symfony/var-dumper": "^4.2 || ^5.1 || ^6.0 || ^7.0.3"
             },
             "require-dev": {
-                "illuminate/support": "^7.20 || ^8.18 || ^9.0 || ^10.0 || ^11.0",
-                "nesbot/carbon": "^2.63",
+                "illuminate/support": "^7.20 || ^8.18 || ^9.0 || ^10.0 || ^11.0 || ^12.0",
+                "nesbot/carbon": "^2.63 || ^3.8.4",
                 "pestphp/pest": "^1.22",
-                "phpstan/phpstan": "^1.10.57 || ^2.0.2",
+                "phpstan/phpstan": "^1.10.57 || ^2.0.3",
                 "phpunit/phpunit": "^9.5",
-                "rector/rector": "dev-main",
+                "rector/rector": "^0.19.2 || ^1.0.1 || ^2.0.0",
                 "spatie/phpunit-snapshot-assertions": "^4.2",
                 "spatie/test-time": "^1.2"
             },
@@ -9394,7 +9394,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/ray/issues",
-                "source": "https://github.com/spatie/ray/tree/1.41.4"
+                "source": "https://github.com/spatie/ray/tree/1.41.6"
             },
             "funding": [
                 {
@@ -9406,20 +9406,20 @@
                     "type": "other"
                 }
             ],
-            "time": "2024-12-09T11:32:15+00:00"
+            "time": "2025-03-21T08:56:30+00:00"
         },
         {
             "name": "symfony/stopwatch",
-            "version": "v7.2.0",
+            "version": "v7.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/stopwatch.git",
-                "reference": "696f418b0d722a4225e1c3d95489d262971ca924"
+                "reference": "5a49289e2b308214c8b9c2fda4ea454d8b8ad7cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/stopwatch/zipball/696f418b0d722a4225e1c3d95489d262971ca924",
-                "reference": "696f418b0d722a4225e1c3d95489d262971ca924",
+                "url": "https://api.github.com/repos/symfony/stopwatch/zipball/5a49289e2b308214c8b9c2fda4ea454d8b8ad7cd",
+                "reference": "5a49289e2b308214c8b9c2fda4ea454d8b8ad7cd",
                 "shasum": ""
             },
             "require": {
@@ -9452,7 +9452,7 @@
             "description": "Provides a way to profile code",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/stopwatch/tree/v7.2.0"
+                "source": "https://github.com/symfony/stopwatch/tree/v7.2.4"
             },
             "funding": [
                 {
@@ -9468,7 +9468,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-09-25T14:21:43+00:00"
+            "time": "2025-02-24T10:49:57+00:00"
         },
         {
             "name": "symfony/yaml",
